@@ -6,10 +6,11 @@
 
 ```bash
 .
-├── README.md
 ├── example/    # 程式碼範例
 ├── img/        # 簡報圖片檔案
 ├── practice/   # 練習程式碼
+├── slide/   # 簡報
+├── README.md
 ├── 大綱.md
 └── 從C語言快速上手Python的基礎實戰.pptx
 ```
