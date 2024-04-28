@@ -1,44 +1,81 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/simple.css">
+	<title>從 C 語言快速上手 Python 的基礎實戰</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>從 C 語言快速上手<br>Python<br>的基礎實戰</h1>
+			</section>
+			<section>
 				<section>
-					<h2>從 C 語言快速上手 Python<br>的基礎實戰</h2>
+					<img src="../img/Python.png" height="500px" alt="" srcset="">
+					<span>https://github.com/SAWARATSUKI/ServiceLogos</span>
 				</section>
-				<section>
-					<h2>Python</h2>
+				<section data-markdown>
+					<textarea class="fragment" data-template>
+						## Python 簡介
+						- Guido van Rossum（吉多·范羅蘇姆）發明，於1991年釋出
+						- 直譯式程式語言
+						![](https://www.thefamouspeople.com/profiles/images/guido-van-rossum-4.jpg)
+					</textarea>
+					<img class="fragment" src="https://www.thefamouspeople.com/profiles/images/guido-van-rossum-4.jpg" height="200px" alt="">
 				</section>
-			</div>
+				<section data-markdown>
+					<textarea data-template>
+						## Python 被廣泛應用於
+						- 網頁應用程式（Flask、Django）
+						- 大數據分析（NumPy、Pandas、Matplotlib）
+						- 人工智慧（PyTorch、TensorFlow）
+						- 系統腳本
+					</textarea>
+				</section>
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			progress: false,
+			slideNumber: true,
+			loop: true,
+			mouseWheel: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Transition style
+			transition: 'none', // none/fade/slide/convex/concave/zoom
+
+			// Hide cursor if inactive
+			hideInactiveCursor: true,
+
+			// Time before the cursor is hidden (in ms)
+			hideCursorTime: 1000,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
