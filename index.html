@@ -15,12 +15,31 @@
     <meta property="og:description" content="大同大學科學開源服務社的社團課程，帶你從 C 語言快速上手 Python" />
     <meta property="og:image" content="https://yuto0226.github.io/FromC2Python/img/Python.png" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+        integrity="sha512-Jk4AqjWsdSzSWCSuQTfYRIF84Rq/eV0G2+tu07byYwHcbTGfdmLrHjUSwvzp5HvbiqK4ibmNwdcG49Y5RGYPTg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <script src="https://kit.fontawesome.com/71a9885d68.js" crossorigin="anonymous"></script>
+
+    <style>
+        pre{
+            background-color: #FFF;
+            padding: 0px !important;
+        }
+    </style>
 </head>
 
 <body class="my-6">
-    <div class="columns full-width my-3">
+    <section class="columns full-width my-3">
         <div class="box column is-three-fifths mx-auto">
             <img src="./img/Python.png" alt="">
             <hr>
@@ -29,10 +48,11 @@
                 <p>大同大學科學開源服務社的社團課程，帶你從 C 語言快速上手 Python</p>
             </div>
         </div>
-    </div>
-    <main class="columns full-width my-3">
+    </section>
+    <section class="columns full-width my-3">
         <div class="box column is-three-fifths mx-auto">
             <div class="content mx-4 my-4">
+                <h2 class="title">連結</h2>
                 <span class="buttons">
                     <a class="button is-info" href="./slide/">
                         <i class="fa-solid fa-chalkboard mr-2"></i>
@@ -53,6 +73,63 @@
                 </span>
             </div>
         </div>
+    </section>
+    <main class="columns full-width my-3">
+        <div class="box column is-three-fifths mx-auto">
+            <div class="content mx-4 my-4">
+                <div class="content">
+                    <h2>事前準備</h2>
+                    <p>
+                        這次 Python 的課程會有大量的實作讓各位練習，會需要設定電腦的環境
+                    </p>
+                    <ul>
+                        <li>Python 環境安裝</li>
+                        <li>VS Code</li>
+                    </ul>
+                    <h3>建立課程目錄</h3>
+                    <p>為了避免和其他的目錄衝突，這次課程會需要獨立出來一個目錄。</p>
+                    <pre><code class="zsh">$ cd ~              # 回到使用者家目錄
+$ mkdir c2python    # 建立 c2python 目錄
+$ cd ./c2python     # 切換進入目錄</code></pre>
+                    <h3>Python 環境安裝</h3>
+                    <p>
+                        Python 的環境可以到 <a href="https://www.python.org/downloads/" target="_blank">Python 官網</a>
+                        安裝對應作業系統的 Python 安裝檔。安裝完畢後，在終端機打開 Python 的直譯器，若正常運行即代表安裝成功。
+                    </p>
+                    <pre><code class="zsh">$ python</code></pre>
+                    <article class="message is-info">
+                        <div class="message-body">
+                            部分作業系統會是 <code class="zsh">$ python3</code>
+                        </div>
+                    </article>
+                    <pre><code class="text">Python 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>></code></pre>
+                    <h3>VS Code 環境安裝</h3>
+                    <p>
+                        到 <a href="https://code.visualstudio.com/Download">VS Code 官網</a> 選擇合適的作業系統版本安裝。安裝完畢後，打開終端機。
+                    </p>
+                    <pre><code class="zsh">$ code .</code></pre>
+                    <p>接著打開插件（Extensions）頁面</p>
+                    <img class="mb-3" src="./img/vscode_pannel.png" alt="" srcset="">
+                    <p>我們這次一共要安裝一些插件來輔助我們寫扣。</p>
+                    <ul>
+                        <li>
+                            <a href="https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hant" target="_blank" rel="noopener noreferrer">
+                                Chinese (Traditional) Language Pack for Visual Studio Code
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python" target="_blank" rel="noopener noreferrer">
+                                Python
+                            </a>
+                        </li>
+                    </ul>
+                    <p>所有插件安裝完後大概會長這樣。</p>
+                    <img class="mb-3" src="./img/vscode_extension.png" alt="" srcset="">
+                </div>
+            </div>
+        </div>
     </main>
     <section class="column">
         <div class=" column is-three-fifths mx-auto giscus"></div>
@@ -60,10 +137,13 @@
     <footer>
 
     </footer>
+
+    <script>hljs.highlightAll();</script>
+
     <script src="https://giscus.app/client.js" data-repo="yuto0226/FromC2Python" data-repo-id="R_kgDOL0QOTg"
         data-category="Announcements" data-category-id="DIC_kwDOL0QOTs4Ce_2G" data-mapping="pathname" data-strict="0"
-        data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme"
-        data-lang="zh-TW" data-loading="lazy" crossorigin="anonymous" async>
+        data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="zh-TW"
+        data-loading="lazy" crossorigin="anonymous" async>
         </script>
 </body>
 
