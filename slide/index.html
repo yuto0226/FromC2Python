@@ -50,7 +50,8 @@
         </section>
         <section>
           <img src="https://www.abtosoftware.com/wp-content/uploads/purposes-for-python-usage-1200x803.png" alt="">
-          <span>2022, <a href="https://www.abtosoftware.com/blog/working-with-pythons-fastapi">Working with Python’s FastAPI</a></span>
+          <span>2022, <a href="https://www.abtosoftware.com/blog/working-with-pythons-fastapi">Working with Python’s
+              FastAPI</a></span>
         </section>
       </section>
 
@@ -58,13 +59,13 @@
       <section>
         <section data-auto-animate>
           <h2>Why Python?</h2>
-          <pre data-id="zen"><code data-trim data-noescape>
+          <pre><code data-trim data-noescape>
               $ python
             </code></pre>
         </section>
         <section data-auto-animate>
           <h2>Why Python?</h2>
-          <pre data-id="zen">
+          <pre>
             <code class="python" data-trim data-noescape data-line-numbers="1|2-11|4-10">
               >>> import this
               The Zen of Python, by Tim Peters
@@ -82,7 +83,7 @@
         </section>
         <section data-auto-animate>
           <h2>Why Python?</h2>
-          <pre data-id="zen">
+          <pre>
             <code class="python" data-trim data-noescape data-line-numbers="4-7">
               >>> import this
               The Zen of Python, by Tim Peters
@@ -97,12 +98,20 @@
         </section>
         <section data-auto-animate>
           <h2>Python V.S. C</h2>
+          <pre>
+            <code class="python" data-trim data-noescape data-line-numbers="">
+              print("Hello, World.")
+            </code>
+          </pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Python V.S. C</h2>
           <pre data-id="ex">
             <code class="python" data-trim data-noescape data-line-numbers="">
               print("Hello, World.")
             </code>
           </pre>
-          <pre class="fragment" data-id="zen">
+          <pre data-id="zen">
             <code class="cpp" data-trim data-noescape data-line-numbers="">
               #include &lt;stdio.h&gt;
               int main(){
@@ -119,7 +128,15 @@
                l = [x for x in range(100) if x % 3 == 0 and x % 7 == 0]
             </code>
           </pre>
-          <pre class="fragment">
+        </section>
+        <section data-auto-animate>
+          <h2>Python V.S. C</h2>
+          <pre data-id="ex">
+            <code class="python" data-trim data-noescape data-line-numbers="">
+                l = [x for x in range(100) if x % 3 == 0 and x % 7 == 0]
+            </code>
+          </pre>
+          <pre class="">
             <code lass="cpp" data-trim data-noescape data-line-numbers="">
               int l[100] = {0};
               int size = 0;
@@ -150,19 +167,129 @@
         </ul>
       </section>
 
+      <!-- Interact with interpreter -->
       <section>
-        <h2>Hello, Python</h2>
-        <pre>
-          <code data-trim data-noescape data-line-numbers="">
-            # hello_python.py
-            
-            def main():
-              print("Hello, World")
+        
+      </section>
 
-            if __name__ == "__main__":
-              main()
-          </code>
-        </pre>
+      <!-- Hello Python -->
+      <section>
+        <section data-auto-animate>
+          <h2>Hello, World</h2>
+          <pre data-id="t">
+            <code data-trim data-line-numbers>
+              $ cd ~/RromC2Python/example
+              $ python ./hello.py
+            </code>
+          </pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Hello, World</h2>
+          <pre data-id="t">
+            <code data-trim data-line-numbers="1-3|2">
+              $ cd ~/RromC2Python/example
+              $ python ./hello.py
+              Hello, World
+            </code>
+          </pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Hello, World</h2>
+          <pre data-id="t">
+            <code data-trim data-line-numbers>
+              $ cd ~/RromC2Python/example
+              $ python ./hello.py
+              Hello, World
+              $ python ./hello.py &lt;自己的名字&gt;
+            </code>
+          </pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Hello, World</h2>
+          <pre data-id="t">
+            <code data-trim data-line-numbers>
+              $ cd ~/RromC2Python/example
+              $ python ./hello.py
+              Hello, World
+              $ python ./hello.py &lt;自己的名字&gt;
+              Hello, &lt;自己的名字&gt;
+            </code>
+          </pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Hello, World</h2>
+          <pre>
+            <code data-trim data-noescape data-line-numbers="">
+              # hello_python.py
+              import sys
+
+              def main(argv):
+                if len(argv) > 1:
+                  print(f"Hello, {argv[1]}")
+                else:
+                  print("Hello, World")
+  
+              if __name__ == "__main__":
+                main(sys.argv)
+            </code>
+          </pre>
+        </section>
+        <section data-auto-animate>
+          <pre>
+            <code data-trim data-noescape data-line-numbers="">
+              # hello_python.py
+              import sys
+
+              def main(argv):
+                if len(argv) > 1:
+                  print(f"Hello, {argv[1]}")
+                else:
+                  print("Hello, World")
+              
+              if __name__ == "__main__":
+                main(sys.argv)
+            </code>
+          </pre>
+          <pre class="">
+            <code data-trim data-noescape data-line-numbers="">
+              // hello_python.c
+              #include &lt;stdio.h&gt;
+              int main(int argc, char* argv[]){
+                printf("Hello, %s", argc > 1 ? argv[0] : "World");
+                return 0;
+              }
+            </code>
+          </pre>
+          <a href="https://docs.python.org/zh-tw/3/library/__main__.html">__main__ --- 頂層程式碼環境</a>
+        </section>
+        <section data-auto-animate>
+          <pre>
+            <code data-trim data-noescape data-line-numbers="4-8">
+              # hello_python.py
+              import sys
+
+              def main(argv):
+                if len(argv) > 1:
+                  print(f"Hello, {argv[1]}")
+                else:
+                  print("Hello, World")
+              
+              if __name__ == "__main__":
+                main(sys.argv)
+            </code>
+          </pre>
+          <pre class="">
+            <code data-trim data-noescape data-line-numbers="3-6">
+              // hello_python.c
+              #include &lt;stdio.h&gt;
+              int main(int argc, char* argv[]){
+                printf("Hello, %s", argc > 1 ? argv[0] : "World");
+                return 0;
+              }
+            </code>
+          </pre>
+          <a href="https://docs.python.org/zh-tw/3/library/__main__.html">__main__ --- 頂層程式碼環境</a>
+        </section>
       </section>
     </div>
   </div>
