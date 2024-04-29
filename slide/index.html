@@ -59,13 +59,13 @@
       <section>
         <section data-auto-animate>
           <h2>Why Python?</h2>
-          <pre><code data-trim data-noescape>
+          <pre data-id="x"><code data-trim data-noescape>
               $ python
             </code></pre>
         </section>
         <section data-auto-animate>
           <h2>Why Python?</h2>
-          <pre>
+          <pre data-id="x">
             <code class="python" data-trim data-noescape data-line-numbers="1|2-11|4-10">
               >>> import this
               The Zen of Python, by Tim Peters
@@ -83,7 +83,7 @@
         </section>
         <section data-auto-animate>
           <h2>Why Python?</h2>
-          <pre>
+          <pre data-id="x">
             <code class="python" data-trim data-noescape data-line-numbers="4-7">
               >>> import this
               The Zen of Python, by Tim Peters
@@ -98,7 +98,7 @@
         </section>
         <section data-auto-animate>
           <h2>Python V.S. C</h2>
-          <pre>
+          <pre data-id="x">
             <code class="python" data-trim data-noescape data-line-numbers="">
               print("Hello, World.")
             </code>
@@ -106,12 +106,12 @@
         </section>
         <section data-auto-animate>
           <h2>Python V.S. C</h2>
-          <pre data-id="ex">
+          <pre data-id="x">
             <code class="python" data-trim data-noescape data-line-numbers="">
               print("Hello, World.")
             </code>
           </pre>
-          <pre data-id="zen">
+          <pre data-id="x">
             <code class="cpp" data-trim data-noescape data-line-numbers="">
               #include &lt;stdio.h&gt;
               int main(){
@@ -123,7 +123,7 @@
         </section>
         <section data-auto-animate>
           <h2>Python V.S. C</h2>
-          <pre data-id="ex">
+          <pre data-id="x">
             <code class="python" data-trim data-noescape data-line-numbers="">
                l = [x for x in range(100) if x % 3 == 0 and x % 7 == 0]
             </code>
@@ -131,12 +131,12 @@
         </section>
         <section data-auto-animate>
           <h2>Python V.S. C</h2>
-          <pre data-id="ex">
+          <pre data-id="x">
             <code class="python" data-trim data-noescape data-line-numbers="">
                 l = [x for x in range(100) if x % 3 == 0 and x % 7 == 0]
             </code>
           </pre>
-          <pre class="">
+          <pre data-id="x">
             <code lass="cpp" data-trim data-noescape data-line-numbers="">
               int l[100] = {0};
               int size = 0;
@@ -172,14 +172,15 @@
         <section data-auto-animate>
           <h2>Python 直譯器</h2>
           <p>打開你的終端機</p>
-          <pre>
+          <pre data-id="x">
             <code data-trim data-noescape>
               $ python  # python3
             </code>
           </pre>
         </section>
-        <section data-auto-animate="">
-          <pre>
+        <section data-auto-animate>
+          <h2>Python 直譯器</h2>
+          <pre data-id="x">
             <code data-trim data-noescape>
               Python 3.10.12 (main, Nov 20 2023, 15:14:05)
               \[GCC 11.4.0] on linux
@@ -188,6 +189,112 @@
               >>>
             </code>
           </pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Python 直譯器</h2>
+          <pre data-id="x"><code data-trim data-noescape>
+            Python 3.10.12 (main, Nov 20 2023, 15:14:05)
+            \[GCC 11.4.0] on linux
+            Type "help", "copyright", "credits" or "license"
+            for more information.
+            >>> stanley = True
+            >>> handsome = False
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Python 直譯器</h2>
+          <pre data-id="x"><code data-trim data-noescape>
+              Python 3.10.12 (main, Nov 20 2023, 15:14:05)
+              \[GCC 11.4.0] on linux
+              Type "help", "copyright", "credits" or "license"
+              for more information.
+              >>> stanley = True
+              >>> handsome = False
+              >>> if stanley is handsome:
+              ...     print("Stanley is handsome.")
+              ... else:
+              ...     print("Stanley is ugly.")
+              ...
+
+            </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Python 直譯器</h2>
+          <pre data-id="x"><code data-trim data-noescape>
+            Python 3.10.12 (main, Nov 20 2023, 15:14:05)
+            \[GCC 11.4.0] on linux
+            Type "help", "copyright", "credits" or "license"
+            for more information.
+            >>> stanley = True
+            >>> handsome = False
+            >>> if stanley is handsome:
+            ...     print("Stanley is handsome.")
+            ... else:
+            ...     print("Stanley is ugly.")
+            ...
+            Stanley is ugly.
+          </code></pre>
+        </section>
+        <section data-auto-animate="">
+          <pre data-id="x"><code>>>> ctrl+z</code></pre>
+          <p>輸入 Ctrl + Z （=EOF）退出 Python 直譯器</p>
+        </section>
+      </section>
+
+      <!-- I/O -->
+      <section>
+        <section data-auto-animate="">
+          <h2>輸入/輸出</h2>
+          建立 io.py 檔案
+          <pre data-id="x"><code data-trim data-noescape>
+            $ cd ~/c2python/
+            $ code io.py
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <p>VS code</p>
+          <pre data-id="x"><code data-trim data-noescape data-line-numbers>
+            # io.py
+            x = input("請輸入 x: ")
+            print(type(x),x)
+          </code></pre>
+        </section>
+        <section data-auto-animate="">
+          <p>Shell</p>
+          <pre data-id="x"><code data-trim data-noescape>
+            $ python io.py
+            請輸入 x: 123
+            &lt;class 'str'&gt; 123
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <a href="https://docs.python.org/3/library/functions.html#print">
+            Python Docs: print()
+          </a>
+          <pre data-id="x"><code data-trim data-noescape>print(*objects, sep=' ', end='\n', file=None, flush=False)</code></pre>
+          <ul>
+            <li>*objects</li>
+            <li>sep</li>
+            <li>end</li>
+            <li>file</li>
+            <li>flush</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- math -->
+      <section>
+        <section>
+          <h2>數學運算</h2>
+          <ul>
+            <li>+：加法</li>
+            <li>-：減法</li>
+            <li>*：乘法</li>
+            <li>/：除法（浮點數）</li>
+            <li>%：取餘數</li>
+            <li>**：指數</li>
+            <li>//：整數除法（int）</li>
+          </ul>
         </section>
       </section>
 
