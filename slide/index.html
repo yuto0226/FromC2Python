@@ -180,6 +180,7 @@
         </section>
         <section data-auto-animate>
           <h2>Python 直譯器</h2>
+          <p>進入Python 直譯器的介面</p>
           <pre data-id="x">
             <code data-trim data-noescape>
               Python 3.10.12 (main, Nov 20 2023, 15:14:05)
@@ -191,7 +192,7 @@
           </pre>
         </section>
         <section data-auto-animate>
-          <h2>Python 直譯器</h2>
+          <h2>稽古 Practice</h2>
           <pre data-id="x"><code data-trim data-noescape>
             Python 3.10.12 (main, Nov 20 2023, 15:14:05)
             \[GCC 11.4.0] on linux
@@ -202,7 +203,7 @@
           </code></pre>
         </section>
         <section data-auto-animate>
-          <h2>Python 直譯器</h2>
+          <h2>稽古 Practice</h2>
           <pre data-id="x"><code data-trim data-noescape>
               Python 3.10.12 (main, Nov 20 2023, 15:14:05)
               \[GCC 11.4.0] on linux
@@ -219,7 +220,7 @@
             </code></pre>
         </section>
         <section data-auto-animate>
-          <h2>Python 直譯器</h2>
+          <h2>稽古 Practice</h2>
           <pre data-id="x"><code data-trim data-noescape>
             Python 3.10.12 (main, Nov 20 2023, 15:14:05)
             \[GCC 11.4.0] on linux
@@ -235,11 +236,13 @@
             Stanley is ugly.
           </code></pre>
         </section>
-        <section data-auto-animate="">
-          <pre data-id="x"><code>>>> ctrl+z</code></pre>
-          <p>輸入 Ctrl + Z （=EOF）退出 Python 直譯器</p>
+        <section data-auto-animate>
+          <h2>退出 Python 直譯器</h2>
+          <pre data-id="x"><code>>>> ctrl+z # 或quit()</code></pre>
+          <p>輸入 Ctrl + Z （=EOF）或 quit() 退出 Python 直譯器</p>
         </section>
       </section>
+      <!-- end 直譯器 -->
 
       <!-- I/O -->
       <section>
@@ -272,16 +275,91 @@
             Python Docs: print()
           </a>
           <pre data-id="x"><code data-trim data-noescape>print(*objects, sep=' ', end='\n', file=None, flush=False)</code></pre>
+          <p>Print <strong style="color: #EC4899;">objects</strong> to <strong style="color: #EC4899;">the text stream file</strong>, separated by <strong style="color: #EC4899;">sep</strong> and followed by <strong style="color: #EC4899;">end</strong>. <strong style="color: #EC4899;">sep, end, file, and flush</strong>, if present, must be given as keyword arguments.</p>
+        </section>
+        <section data-auto-animate>
+          <a href="https://docs.python.org/3/library/functions.html#print">
+            Python Docs: print()
+          </a>
+          <pre data-id="x"><code data-trim data-noescape>print(*objects, sep=' ', end='\n', file=None, flush=False)</code></pre>
           <ul>
-            <li>*objects</li>
-            <li>sep</li>
-            <li>end</li>
-            <li>file</li>
-            <li>flush</li>
+            <li>*objects：要印出去的東西</li>
+            <li>sep：object 印出時用 sep 分開</li>
+            <li>end：結尾印出 end</li>
+            <li>file：要印出去的地方，預設是 sys.stdout</li>
+            <li>flush：是否清出輸出緩存</li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h2>稽古 Practice</h2>
+          <pre><code data-trim data-noescape>
+            寫一個程式，會從終端機輸入一個字串，請將字串用 print() 印出。
+            "Hello," 會做為第一個參數，第二個參數則是輸入的字串。
+            最終的結果將是 "Hello, <輸入的字串>!"。
+          </code></pre>
+        </section>
+      </section>
+      <!-- end I/O -->
+
+      <!-- comment -->
+      <section data-auto-animate>
+        <h2>註解</h2>
+        <pre><code class="python" data-trim data-noescape>
+          # 註解會打在 # 的後面
+          # Python 沒有多行註解
+          print() # 這行會印出一個 '\n'
+        </code></pre>
+      </section>
+      <!-- end comment -->
+
+      <!-- variable -->
+      <section>
+        <section data-auto-animate>
+          <h2>變數</h2>
+          <p>儲存資料的容器</p>
+          <ul>
+            <li>數字類型 Numbers：int, float, complex</li>
+            <li>布林類型 Boolean：bool</li>
+            <li>序列類型 Sequence：list, tuple, range</li>
+            <li>文本序列類型 Text Sequence：str</li>
+            <li>二進位序列類型 Binary Sequence：bytes, bytearray, memoryview</li>
+            <li>集合類型 Set：set, frozenset</li>
+            <li>映射類型 Mapping：dict</li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h2>變數</h2>
+          <p>儲存資料的容器</p>
+          <ul>
+            <li>int, float</li>
+            <li>bool</li>
+            <li>list, str</li>
+            <li>dict</li>
+          </ul>
+          <p><a href="https://docs.python.org/3/library/stdtypes.html#">Built-in Types</a></p>
+        </section>
+        <section data-auto-animate>
+          <h2>變數</h2>
+          <pre><code class="python" data-trim data-noescape>
+            # 宣告變數時不用指定型別
+            # 一個變數可以裝不同型別的資料
+            num, flt = 31, 4.2
+            num = "TTUSSC"
+            flt = [1, 1, 2, 3, 5, 8, 13] # 費氏數列
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>變數</h2>
+          <p>總結來講，Python 變數就是</p>
+          <ul>
+            <li>儲存資料的容器</li>
+            <li>可以裝不同型別的資料</li>
+            <li>可以單行多重賦值</li>
           </ul>
         </section>
       </section>
-
+      <!-- end variable -->
+      
       <!-- math -->
       <section>
         <section>
@@ -297,6 +375,7 @@
           </ul>
         </section>
       </section>
+      <!-- end Math -->
 
       <!-- Hello Python -->
       <section>
