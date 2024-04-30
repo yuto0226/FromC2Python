@@ -173,7 +173,7 @@
           <h2>Python 直譯器</h2>
           <p>打開你的終端機</p>
           <pre data-id="x">
-            <code data-trim data-noescape>
+            <code class="shell" data-trim data-noescape>
               $ python  # python3
             </code>
           </pre>
@@ -182,7 +182,7 @@
           <h2>Python 直譯器</h2>
           <p>進入Python 直譯器的介面</p>
           <pre data-id="x">
-            <code data-trim data-noescape>
+            <code class="zsh" data-trim data-noescape>
               Python 3.10.12 (main, Nov 20 2023, 15:14:05)
               \[GCC 11.4.0] on linux
               Type "help", "copyright", "credits" or "license"
@@ -193,7 +193,7 @@
         </section>
         <section data-auto-animate>
           <h2>稽古 Practice</h2>
-          <pre data-id="x"><code data-trim data-noescape>
+          <pre data-id="x"><code class="zsh" data-trim data-noescape>
             Python 3.10.12 (main, Nov 20 2023, 15:14:05)
             \[GCC 11.4.0] on linux
             Type "help", "copyright", "credits" or "license"
@@ -204,7 +204,7 @@
         </section>
         <section data-auto-animate>
           <h2>稽古 Practice</h2>
-          <pre data-id="x"><code data-trim data-noescape>
+          <pre data-id="x"><code class="zsh" data-trim data-noescape>
               Python 3.10.12 (main, Nov 20 2023, 15:14:05)
               \[GCC 11.4.0] on linux
               Type "help", "copyright", "credits" or "license"
@@ -221,7 +221,7 @@
         </section>
         <section data-auto-animate>
           <h2>稽古 Practice</h2>
-          <pre data-id="x"><code data-trim data-noescape>
+          <pre data-id="x"><code class="zsh" data-trim data-noescape>
             Python 3.10.12 (main, Nov 20 2023, 15:14:05)
             \[GCC 11.4.0] on linux
             Type "help", "copyright", "credits" or "license"
@@ -238,7 +238,7 @@
         </section>
         <section data-auto-animate>
           <h2>退出 Python 直譯器</h2>
-          <pre data-id="x"><code>>>> ctrl+z # 或quit()</code></pre>
+          <pre data-id="x"><code class="python">>>> ctrl+z # 或quit()</code></pre>
           <p>輸入 Ctrl + Z （=EOF）或 quit() 退出 Python 直譯器</p>
         </section>
       </section>
@@ -249,39 +249,47 @@
         <section data-auto-animate="">
           <h2>輸入/輸出</h2>
           建立 io.py 檔案
-          <pre data-id="x"><code data-trim data-noescape>
+          <pre data-id="y"><code class="shell" data-trim data-noescape>
             $ cd ~/c2python/
             $ code io.py
           </code></pre>
         </section>
         <section data-auto-animate>
           <p>VS code</p>
-          <pre data-id="x"><code data-trim data-noescape data-line-numbers>
+          <pre data-id="y"><code class="python" data-trim data-noescape data-line-numbers>
             # io.py
             x = input("請輸入 x: ")
-            print(type(x),x)
+            print(x)
           </code></pre>
         </section>
         <section data-auto-animate="">
           <p>Shell</p>
-          <pre data-id="x"><code data-trim data-noescape>
+          <pre data-id="y"><code class="shell" data-trim data-noescape>
             $ python io.py
             請輸入 x: 123
-            &lt;class 'str'&gt; 123
+            123
           </code></pre>
+        </section>
+        <section data-auto-animate>
+          <a href="https://docs.python.org/zh-tw/3/library/functions.html?sid=uPnwpz#input">Python Docs: input()</a>
+          <pre data-id="y"><code class="python" data-trim data-noescape>
+            input(prompt)
+          </code></pre>
+          <p>如果有傳入 prompt參數則會在 sys.stdout 印出 prompt（不換行）<br>
+            input() 會從 sys.stdin 讀取一行轉換成字串</p>
         </section>
         <section data-auto-animate>
           <a href="https://docs.python.org/3/library/functions.html#print">
             Python Docs: print()
           </a>
-          <pre data-id="x"><code data-trim data-noescape>print(*objects, sep=' ', end='\n', file=None, flush=False)</code></pre>
+          <pre data-id="y"><code class="python" data-trim data-noescape>print(*objects, sep=' ', end='\n', file=None, flush=False)</code></pre>
           <p>Print <strong style="color: #EC4899;">objects</strong> to <strong style="color: #EC4899;">the text stream file</strong>, separated by <strong style="color: #EC4899;">sep</strong> and followed by <strong style="color: #EC4899;">end</strong>. <strong style="color: #EC4899;">sep, end, file, and flush</strong>, if present, must be given as keyword arguments.</p>
         </section>
         <section data-auto-animate>
           <a href="https://docs.python.org/3/library/functions.html#print">
             Python Docs: print()
           </a>
-          <pre data-id="x"><code data-trim data-noescape>print(*objects, sep=' ', end='\n', file=None, flush=False)</code></pre>
+          <pre data-id="y"><code data-trim data-noescape>print(*objects, sep=' ', end='\n', file=None, flush=False)</code></pre>
           <ul>
             <li>*objects：要印出去的東西</li>
             <li>sep：object 印出時用 sep 分開</li>
@@ -292,7 +300,7 @@
         </section>
         <section data-auto-animate>
           <h2>稽古 Practice</h2>
-          <pre><code data-trim data-noescape>
+          <pre data-id="y"><code data-trim data-noescape>
             寫一個程式，會從終端機輸入一個字串，請將字串用 print() 印出。
             "Hello," 會做為第一個參數，第二個參數則是輸入的字串。
             最終的結果將是 "Hello, <輸入的字串>!"。
@@ -350,6 +358,30 @@
         </section>
         <section data-auto-animate>
           <h2>變數</h2>
+          <p>型別轉換</p>
+          <pre data-id="x"><code class="python" data-trim data-noescape>
+            # 型別(轉換的目標)
+            data = "2024"
+            print(type(data), data)
+            data = int(data)
+            print(type(data), data)
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>變數</h2>
+          <p>型別轉換</p>
+          <pre data-id="x"><code class="python" data-trim data-noescape>
+            # 型別(轉換的目標)
+            data = "2024"
+            print(type(data), data)
+            # &lt;class 'str'&gt; 2024
+            data = int(data)
+            print(type(data), data)
+            # &lt;class 'int'&gt; 2024
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>變數</h2>
           <p>總結來講，Python 變數就是</p>
           <ul>
             <li>儲存資料的容器</li>
@@ -362,9 +394,9 @@
       
       <!-- math -->
       <section>
-        <section>
+        <section data-auto-animate>
           <h2>數學運算</h2>
-          <ul>
+          <ul data-id="x">
             <li>+：加法</li>
             <li>-：減法</li>
             <li>*：乘法</li>
@@ -373,6 +405,18 @@
             <li>**：指數</li>
             <li>//：整數除法（int）</li>
           </ul>
+        </section>
+        <section data-auto-animate>
+          <h2>稽古 Practice</h2>
+          <pre data-id="x"><code class="text" data-trim data-noescape> 
+            撰寫一個 BMI 計算機(bmi.py)，會有兩行輸入：身高(cm)、體重(KG)，
+            輸出 BMI 值。
+
+            請輸入身高：167
+            請輸入體重：51
+            BMI 是：18.286779733945284
+          </code></pre>
+          <p>Extra：小數點取兩位可以怎麼做？</p>
         </section>
       </section>
       <!-- end Math -->
