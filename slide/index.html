@@ -66,7 +66,7 @@
         <section data-auto-animate>
           <h2>Why Python?</h2>
           <pre data-id="x">
-            <code class="python" data-trim data-noescape data-line-numbers="1|2-11|4-10">
+            <code class="python" data-trim data-noescape data-line-numbers="1|4-10">
               >>> import this
               The Zen of Python, by Tim Peters
               
@@ -153,18 +153,66 @@
 
       <!-- 環境設置 -->
       <section>
-        <h2>環境設置</h2>
-        <ul>
-          <li>
-            <a href="https://yuto0226.com/FromC2Python/">參考指南</a>
-          </li>
-          <li>
-            <a href="https://www.python.org/downloads/" target="_blank">Python</a>
-          </li>
-          <li>
-            <a href="https://code.visualstudio.com/Download" target="_blank">VS Code</a>
-          </li>
-        </ul>
+        <section data-auto-animate>
+          <h2>環境設置</h2>
+          <ul>
+            <li>
+              <a href="https://yuto0226.com/FromC2Python/" target="_blank">參考指南</a>
+            </li>
+            <li>
+              <a href="https://www.python.org/downloads/" target="_blank">Python</a>
+            </li>
+            <li>
+              <a href="https://code.visualstudio.com/Download" target="_blank">VS Code</a>
+            </li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h2>建立課程目錄</h2>
+          <pre data-id="x"><code data-trim data-noescape>
+            $ cd ~ # 回到使用者家目錄
+            $ mkdir c2python # 建立 c2python 目錄
+            $ cd ./c2python # 切換進入目錄
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Python 環境安裝</h2>
+          <a href="https://www.python.org/downloads/" target="_blank">Python 官網</a>
+          <pre data-id="x"><code data-trim data-noescape>
+            $ python
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>VS Code 環境安裝 & 設定</h2>
+          <a href="https://code.visualstudio.com/Download" target="_blank">VS Code 官網</a>
+          <pre data-id="x"><code data-trim data-noescape>
+            $ code .
+          </code></pre>
+          <ul>
+            <li>
+              <a href="https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hant">
+                Chinese (Traditional) Language Pack
+              </a>
+            </li>
+            <li>
+              <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">
+                Python
+              </a>
+            </li>
+            <li>
+              <a href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter" target="_blank">
+                Jupyter
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h2>課程簡報與程式碼</h2>
+          <pre data-id="x"><code class="zsh" data-trim data-noescape>
+            $ cd ~
+            $ git clone https://github.com/yuto0226/FromC2Python.git
+          </code></pre>
+        </section>
       </section>
 
       <!-- Interact with interpreter -->
@@ -183,38 +231,77 @@
           <p>進入Python 直譯器的介面</p>
           <pre data-id="x">
             <code class="zsh" data-trim data-noescape>
-              Python 3.10.12 (main, Nov 20 2023, 15:14:05)
-              \[GCC 11.4.0] on linux
-              Type "help", "copyright", "credits" or "license"
-              for more information.
+              >>>
+              ...
+            </code>
+          </pre>
+        </section>
+        <section data-auto-animate>
+          <p>與 Python 直譯器互動</p>
+          <pre data-id="x">
+            <code class="zsh" data-trim data-noescape>
+              >>> 1 + 1
+              2
+              >>> x = 42
+              >>> x ** 2
+              1764
+              >>> x = x ** 2 + 5
+              >>> x
+            </code>
+          </pre>
+        </section>
+        <section data-auto-animate>
+          <p>與 Python 直譯器互動</p>
+          <pre data-id="x">
+            <code class="zsh" data-trim data-noescape>
+              >>> 1 + 1
+              2
+              >>> x = 42
+              >>> x ** 2
+              1764
+              >>> x = x ** 2 + 5
+              >>> x
+              1769
               >>>
             </code>
           </pre>
         </section>
         <section data-auto-animate>
           <h2>稽古 Practice</h2>
-          <pre data-id="x"><code class="zsh" data-trim data-noescape>
-            Python 3.10.12 (main, Nov 20 2023, 15:14:05)
-            \[GCC 11.4.0] on linux
-            Type "help", "copyright", "credits" or "license"
-            for more information.
-            >>> stanley = True
-            >>> handsome = False
+          <pre data-id="x"><code data-trim data-noescape>
+            import math
+            >>> r = 18
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>稽古 Practice</h2>
+          計算 \( r^2 \times \pi \)<br>
+          Hint: \( \pi \) = math.pi
+        </section>
+        <section data-auto-animate>
+          <h2>稽古 Practice</h2>
+          <pre data-id="x"><code data-trim data-noescape>
+            >>> r = 18
+            >>> r ** 2 * math.pi
+            1017.8760197630929
           </code></pre>
         </section>
         <section data-auto-animate>
           <h2>稽古 Practice</h2>
           <pre data-id="x"><code class="zsh" data-trim data-noescape>
-              Python 3.10.12 (main, Nov 20 2023, 15:14:05)
-              \[GCC 11.4.0] on linux
-              Type "help", "copyright", "credits" or "license"
-              for more information.
-              >>> stanley = True
-              >>> handsome = False
+            >>> Yuto = True
+            >>> handsome = True
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>稽古 Practice</h2>
+          <pre data-id="x"><code class="zsh" data-trim data-noescape>
+              >>> Yuto = True
+              >>> handsome = True
               >>> if stanley is handsome:
-              ...     print("Stanley is handsome.")
+              ...     print("Yuto is handsome.")
               ... else:
-              ...     print("Stanley is ugly.")
+              ...     print("Yuto is ugly.")
               ...
 
             </code></pre>
@@ -222,23 +309,19 @@
         <section data-auto-animate>
           <h2>稽古 Practice</h2>
           <pre data-id="x"><code class="zsh" data-trim data-noescape>
-            Python 3.10.12 (main, Nov 20 2023, 15:14:05)
-            \[GCC 11.4.0] on linux
-            Type "help", "copyright", "credits" or "license"
-            for more information.
-            >>> stanley = True
-            >>> handsome = False
+            >>> Yuto = True
+            >>> handsome = True
             >>> if stanley is handsome:
-            ...     print("Stanley is handsome.")
+            ...     print("Yuto is handsome.")
             ... else:
-            ...     print("Stanley is ugly.")
+            ...     print("Yuto is ugly.")
             ...
-            Stanley is ugly.
+            Yuto is handsome.
           </code></pre>
         </section>
         <section data-auto-animate>
           <h2>退出 Python 直譯器</h2>
-          <pre data-id="x"><code class="python">>>> ctrl+z # 或quit()</code></pre>
+          <pre data-id="x"><code class="python">>>> ^Z # Crtl+z或quit()</code></pre>
           <p>輸入 Ctrl + Z （=EOF）或 quit() 退出 Python 直譯器</p>
         </section>
       </section>
@@ -381,20 +464,10 @@
 
       <!-- list -->
       <section>
-        <section>
-          <h2>List & String</h2>
-          <p>可以把它視為自由調整大小的陣列，同時還可以裝不同類型的資料。</p>
-        </section>
         <section data-auto-animate>
           <h2>List & String</h2>
-          <pre data-id="x"><code class="text" data-trim>
-            0   1   2   3   4   5
-            +---+---+---+---+---+---+
-            | P | y | t | h | o | n |
-            +---+---+---+---+---+---+
-            -6  -5  -4  -3  -2  -1
-          </code></pre>
-          <pre><code class="python">l = "Python"</code></pre>
+          <h4>串列 & 字串</h4>
+          <p>可以把它視為自由調整大小的陣列，同時還可以裝不同類型的資料。</p>
         </section>
         <section data-auto-animate>
           <h2>List & String</h2>
@@ -420,9 +493,65 @@
         </section>
         <section data-auto-animate>
           <h2>List & String</h2>
+          <p>字串和 C 一樣，用雙引號包住</p>
+          <pre data-id="x"><code class="text" data-trim>
+            0   1   2   3   4   5
+            +---+---+---+---+---+---+
+            | P | y | t | h | o | n |
+            +---+---+---+---+---+---+
+            -6  -5  -4  -3  -2  -1
+          </code></pre>
+          <pre><code class="python">l = "Python"</code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>List & String</h2>
+          <p>Python 合法的字串形式</p>
+          <pre><code class="python" data-trim>
+            print('spam eggs') # spam eggs
+            print("Paris rabbit!") # Paris rabbit!
+            print("""\
+              Usage: thingy [OPTIONS]
+                -h              Display this usage message
+                -H hostname     Hostname to connect to
+            """)
+            # Usage: thingy [OPTIONS]
+            #   -h Display      this usage message
+            #   -H hostname     Hostname to connect to
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>List & String</h2>
+          <p>str 的操作</p>
+          <pre data-id="x"><code class="python" data-trim>
+            first = "Elon"
+            last = "Ma"
+            print(first + "&nbsp;" + last) # Elon Ma
+            pritn(last * 3) # MaMaMa
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>List & String</h2>
+          <p>list 的切分</p>
+          <pre data-id="x"><code class="zsh" data-trim>
+            >>> # l[開始:結尾:間隔]
+            >>> l = "Python"
+            >>> l[1:5]
+            'ytho'
+          </code></pre>
+          <pre data-id="x"><code class="text" data-trim>
+              0   1   2   3   4   5
+              +---+---+---+---+---+---+
+              | P | y | t | h | o | n |
+              +---+---+---+---+---+---+
+                  ^               ^
+                  |---- 這中間 ----|
+            </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>List & String</h2>
           <p>list 的切分</p>
           <pre data-id="x"><code class="x" data-trim>
-            # l[開始:結尾後面一個:間隔]
+            # l[開始:結尾:間隔]
             a = [0, 1, 2, 3, 4, 5, 6, 7, 8]
             print(a[2:7])   # [2, 3, 4, 5, 6]
             print(a[::2])   # [0, 2, 4, 6, 8]
@@ -431,6 +560,19 @@
         </section>
         <section data-auto-animate>
           <h2>稽古 Practice</h2>
+          <pre data-id="x"><code class="md" data-trim data-noescape>
+            撰寫一個程式，會輸入一個字串(len > 3)。分別將字串進行操作，
+            - 倒著印出來
+            - 跳一格印出
+            - 字串切最前面兩個字元
+            字串切最後三個字元
+            ex. "stanley"
+            yelnats
+            saly
+            st
+            ley
+          </code></pre>
+          <span>Hint: 使用 <a href="https://docs.python.org/zh-tw/3/library/functions.html?sid=uPnwpz#len">len(串列)</a> 可以取得其元素個數</span>
         </section>
       </section>
       <!-- end list -->
@@ -494,7 +636,7 @@
         <section data-auto-animate>
           <h2>Hello, World</h2>
           <pre data-id="t">
-            <code data-trim data-line-numbers>
+            <code data-trim>
               $ cd ~/RromC2Python/example
               $ python ./hello.py
             </code>
@@ -503,7 +645,7 @@
         <section data-auto-animate>
           <h2>Hello, World</h2>
           <pre data-id="t">
-            <code data-trim data-line-numbers="1-3|2">
+            <code data-trim>
               $ cd ~/RromC2Python/example
               $ python ./hello.py
               Hello, World
@@ -513,10 +655,7 @@
         <section data-auto-animate>
           <h2>Hello, World</h2>
           <pre data-id="t">
-            <code data-trim data-line-numbers>
-              $ cd ~/RromC2Python/example
-              $ python ./hello.py
-              Hello, World
+            <code data-trim>
               $ python ./hello.py &lt;自己的名字&gt;
             </code>
           </pre>
@@ -524,12 +663,9 @@
         <section data-auto-animate>
           <h2>Hello, World</h2>
           <pre data-id="t">
-            <code data-trim data-line-numbers>
-              $ cd ~/RromC2Python/example
-              $ python ./hello.py
-              Hello, World
-              $ python ./hello.py &lt;自己的名字&gt;
-              Hello, &lt;自己的名字&gt;
+            <code class="zsh" data-trim>
+              $ python ./hello.py 自己的名字
+              Hello, 自己的名字
             </code>
           </pre>
         </section>
@@ -608,6 +744,167 @@
           <a href="https://docs.python.org/zh-tw/3/library/__main__.html">__main__ --- 頂層程式碼環境</a>
         </section>
       </section>
+      <!-- end Hello Python -->
+
+
+      <!-- while -->
+      <section>
+        <section data-auto-animate>
+          <h2>while</h2>
+          <pre data-id="x"><code class="python" data-trim>
+                  while 條件:
+                    # do something
+                </code></pre>
+        </section>
+      </section>
+      <!-- end while -->
+
+      <!-- for -->
+      <section>
+        <section data-auto-animate>
+          <h2>for</h2>
+          <pre data-id="x"><code class="python" data-trim>
+            for 元素 in 串列:
+              # do something
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>for</h2>
+          <pre data-id="x"><code class="python" data-trim>
+            for 元素 in 串列:
+              # do something
+          </code></pre>
+          <pre data-id="x"><code class="python" data-trim>
+            group = ["Stanley", "York", "Wayne", "Ruby"]
+            for people in group:
+              print(people)
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>for</h2>
+          <pre data-id="x"><code class="python" data-trim>
+            for 元素 in 串列:
+              # do something
+          </code></pre>
+          <pre data-id="x"><code class="python" data-trim>
+            group = ["Stanley", "York", "Wayne", "Ruby"]
+            for people in group:
+              print(people)
+          </code></pre>
+          <pre data-id="x"><code data-trim>
+            string str = "Allen";
+            for(char ch:str){
+              std::cout >> ch;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>range()</h2>
+          <pre data-id="x"><code class="python" data-trim>
+            range(開始,結束,間隔)
+          </code></pre>
+
+          <pre data-id="x"><code class="zsh" data-trim>
+            >>> list(range(1,5))
+            [1, 2, 3, 4]
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>for + range() 組合技</h2>
+          <pre data-id="x"><code data-trim>
+            for i in range(5):
+              print(i)
+          </code></pre>
+          <pre data-id="x"><code data-trim>
+            for(int i = 0;i < 5; i++){
+              printf("%d\n",i);
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>稽古 Practice</h2>
+          <pre data-id="x"><code class="md" data-trim>
+            撰寫一個程式，輸入一個數字 n 計算 1 + 2 + 3 + ... + n，
+            以及 n!
+          </code></pre>
+        </section>
+        <!-- <section data-auto-animate>
+
+          <pre data-id="x"><code data-trim></code></pre>
+        </section> -->
+      </section>
+      <!-- end for -->
+
+      <!-- break, continue, pass -->
+      <section>
+        <section data-auto-animate>
+          <h2>break, continue, pass</h2>
+          <pre data-id="x"><code data-trim></code></pre>
+        </section>
+      </section>
+      <!-- end break, continue, pass -->
+
+      <!-- dict -->
+      <section>
+        <section data-auto-animate>
+          <h2>字典 dict</h2>
+          <pre data-id="x"><code data-trim></code></pre>
+        </section>
+      </section>
+      <!-- end dict -->
+
+      <!-- def -->
+      <!-- decorator -->
+      <!-- recursion -->
+      <section>
+        <section data-auto-animate>
+          <h2>函式 function</h2>
+          <pre data-id="x"><code data-trim></code></pre>
+        </section>
+      </section>
+      <!-- end def -->
+
+      <!-- socket -->
+      <section>
+        <section data-auto-animate>
+          <h2>網路封包</h2>
+          <pre data-id="x"><code data-trim></code></pre>
+        </section>
+      </section>
+      <!-- end socket -->
+
+      <!-- Cryptography -->
+      <section>
+        <section data-auto-animate>
+          <h2>密碼學 cryptography</h2>
+          <pre data-id="x"><code data-trim></code></pre>
+        </section>
+      </section>
+      <!-- end Cryptography -->
+
+      <!-- requests + data -->
+      <section>
+        <section data-auto-animate>
+          <h2>requests + 資料清洗</h2>
+          <pre data-id="x"><code data-trim></code></pre>
+        </section>
+      </section>
+      <!-- end requests + data -->
+
+      <!-- class -->
+      <section>
+        <section data-auto-animate>
+          <h2>類別 class</h2>
+          <pre data-id="x"><code data-trim></code></pre>
+        </section>
+      </section>
+      <!-- end class -->
+
+      <section>
+        <section data-auto-animate>
+          <pre data-id="x"><code data-trim></code></pre>
+        </section>
+      </section>
     </div>
   </div>
 
@@ -615,6 +912,7 @@
   <script src="plugin/notes/notes.js"></script>
   <script src="plugin/markdown/markdown.js"></script>
   <script src="plugin/highlight/highlight.js"></script>
+  <script src="plugin/math/math.js"></script>
   <script>
     // More info about initialization & config:
     // - https://revealjs.com/initialization/
@@ -636,7 +934,7 @@
       hideCursorTime: 1000,
 
       // Learn about plugins: https://revealjs.com/plugins/
-      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX]
     });
   </script>
 </body>
