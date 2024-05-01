@@ -628,6 +628,17 @@
             }
           </code></pre>
         </section>
+        <section data-auto-animate>
+          <h2>稽古 Practice</h2>
+          <pre data-id="x"><code class="md" data-trim>
+            撰寫一個程式，解出 \( ax^2 + bx + c = 0 \) 的解。
+            有三個輸入 a, b, c，
+            若兩個根不同印出 "Two different roots x1=?? , x2=??"，
+            若兩同根則印出 "Two same roots x=??"，
+            若無實數解則印出 "No real root"。
+          </code></pre>
+          <a href="https://zerojudge.tw/ShowProblem?problemid=a006">a006. 一元二次方程式</a>
+        </section>
       </section>
       <!-- end if -->
 
@@ -756,6 +767,13 @@
                     # do something
                 </code></pre>
         </section>
+        <section data-auto-animate>
+          <h2>稽古 Practice</h2>
+          <pre data-id="x"><code class="md" data-trim>
+            撰寫一個程式，計算(((1+1)*2+1)*2+1)...，直到數字是71的倍數為止。
+            判斷其值是否為三的倍數。
+          </code></pre>
+        </section>
       </section>
       <!-- end while -->
 
@@ -827,6 +845,8 @@
             撰寫一個程式，輸入一個數字 n 計算 1 + 2 + 3 + ... + n，
             以及 n!
           </code></pre>
+          <a href="https://zerojudge.tw/ShowProblem?problemid=a244">a244. 新手訓練 ~ for + if</a><br>
+          <a href="https://zerojudge.tw/ShowProblem?problemid=a005">a005. Eva 的回家作業</a>
         </section>
         <!-- <section data-auto-animate>
 
@@ -839,7 +859,40 @@
       <section>
         <section data-auto-animate>
           <h2>break, continue, pass</h2>
-          <pre data-id="x"><code data-trim></code></pre>
+          <ul data-id="x">
+            <li><span style="color: #EC4899;">break</span>：終止最內部的 for 或 while 迴圈</li>
+            <li><span style="color: #EC4899;">continue</span>：直接跳到迴圈的下一圈</li>
+            <li><span style="color: #EC4899;">pass</span>：它不會執行任何動作，可以用在需要陳述式且不需執行動作的時候</li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h2><span style="color: #EC4899;">break</span>, continue, pass</h2>
+          <pre data-id="x"><code class="py" data-trim>
+            while True:
+              x = input()
+              if x == '':
+                break
+              print(x)
+          </code></pre>
+          <p>輸入任意字串直到輸入空字串為止</p>
+        </section>
+        <section data-auto-animate>
+          <h2>break, <span style="color: #EC4899;">continue</span>, pass</h2>
+          <pre data-id="x"><code class="python" data-trim>
+            for i in range(100):
+              if i % 13 == 0:
+                continue
+              print(i)
+          </code></pre>
+          <p>跳過印出13的倍數的值</p>
+        </section>
+        <section data-auto-animate>
+          <h2>break, continue, <span style="color: #EC4899;">pass</span></h2>
+          <pre data-id="x"><code data-trim>
+            for i in range(1000000):
+              pass
+          </code></pre>
+          <p>1000000 次的空迴圈</p>
         </section>
       </section>
       <!-- end break, continue, pass -->
@@ -847,8 +900,93 @@
       <!-- dict -->
       <section>
         <section data-auto-animate>
-          <h2>字典 dict</h2>
-          <pre data-id="x"><code data-trim></code></pre>
+          <h2>
+            <a href="https://docs.python.org/zh-tw/3/tutorial/datastructures.html#dictionaries">字典 dict</a>
+          </h2>
+          <ul>
+            <li>key：資料的鍵/鑰匙</li>
+            <li>value：資料的內容</li>
+          </ul>
+          <img data-id="x" src="https://miro.medium.com/max/3840/1*PuxMZOauwESrnoPMqpgWSw.png" style="background-color: #fff;" height="400" alt="" srcset="">
+        </section>
+        <section data-auto-animate>
+          <h2>
+            <a href="https://docs.python.org/zh-tw/3/tutorial/datastructures.html#dictionaries">字典 dict</a>
+          </h2>
+          <pre data-id="x"><code class="py" data-trim>
+            d = {鍵:資料}
+            print(d[鍵]) # 資料
+            d[鍵] = 新資料
+            d[新鍵] = 資料 # 新增資料
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>
+            <a href="https://docs.python.org/zh-tw/3/tutorial/datastructures.html#dictionaries">字典 dict</a>
+          </h2>
+          <pre data-id="x"><code class="py" data-trim data-line-numbers>
+            grade = {
+              "discrete":56, "java":95,
+              "android":100, "english":78
+            }
+            print(grade["discrete"])  # 56
+            print("java" in grade) # True
+            print("english" not in grade) # False
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>
+            <a href="https://docs.python.org/zh-tw/3/tutorial/datastructures.html#dictionaries">字典 dict</a>
+          </h2>
+          <pre data-id="x"><code class="py" data-trim data-line-numbers data-ln-start-from="8">
+            print(list(grade))
+            # ['discrete', 'java', 'android', 'english']
+            print(list(grade.values())) 
+            # [56, 95, 100, 78]
+            grade["news_eng"] = 66
+            print(grade)
+            # {
+            #   'discrete': 56, 'java': 95,
+            #   'android': 100, 'english': 78, 'news_eng': 66
+            # }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>
+            <a href="https://docs.python.org/zh-tw/3/tutorial/datastructures.html#dictionaries">字典 dict</a>
+          </h2>
+          <pre data-id="x"><code class="py" data-trim>
+            del grade["english"]
+            print(grade)
+            # {
+            #   'discrete': 56, 'java': 95,
+            #   'android': 100, 'news_eng': 66
+            # }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>稽古 Practice</h2>
+          <pre data-id="x"><code class="md" data-trim>
+            撰寫一個字典程式可以自由的新增單字以及修改單字。
+            輸入 a 新增/修改單字，
+            輸入 l 印出目標單字，若無資料則印出"查無單字"，
+            輸入 p 印出所有單字，
+            輸入 q 退出
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>稽古 Practice</h2>
+          <pre data-id="x"><code class="md" data-trim>
+            a
+            請輸入單字：array
+            請輸入中文：陣列
+            l
+            請輸入單字：array
+            陣列
+            p
+            ...
+            q
+          </code></pre>
         </section>
       </section>
       <!-- end dict -->
@@ -858,8 +996,27 @@
       <!-- recursion -->
       <section>
         <section data-auto-animate>
-          <h2>函式 function</h2>
+          <h2>
+            <a href="https://docs.python.org/zh-tw/3/tutorial/controlflow.html#defining-functions">
+              函式 function
+            </a>
+          </h2>
+          <pre data-id="x"><code class="py" data-trim>
+            def 函式名稱(參數):
+              [return 回傳值]
+          </code></pre>
+        </section>
+        <!-- <section data-auto-animate>
+          <h2>
+            <a href="https://docs.python.org/zh-tw/3/tutorial/controlflow.html#defining-functions">
+              函式 function
+            </a>
+          </h2>
           <pre data-id="x"><code data-trim></code></pre>
+        </section> -->
+        <section data-auto-animate>
+          <h2>稽古 Practice</h2>
+          <pre data-id="x"><code class="md" data-trim></code></pre>
         </section>
       </section>
       <!-- end def -->
@@ -870,6 +1027,10 @@
           <h2>網路封包</h2>
           <pre data-id="x"><code data-trim></code></pre>
         </section>
+        <section data-auto-animate>
+          <h2>稽古 Practice</h2>
+          <pre data-id="x"><code class="md" data-trim></code></pre>
+        </section>
       </section>
       <!-- end socket -->
 
@@ -879,6 +1040,11 @@
           <h2>密碼學 cryptography</h2>
           <pre data-id="x"><code data-trim></code></pre>
         </section>
+        <section data-auto-animate>
+          <h2>稽古 Practice</h2>
+          <pre data-id="x"><code class="md" data-trim></code></pre>
+        </section>
+        
       </section>
       <!-- end Cryptography -->
 
@@ -887,6 +1053,10 @@
         <section data-auto-animate>
           <h2>requests + 資料清洗</h2>
           <pre data-id="x"><code data-trim></code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>稽古 Practice</h2>
+          <pre data-id="x"><code class="md" data-trim></code></pre>
         </section>
       </section>
       <!-- end requests + data -->
@@ -897,12 +1067,21 @@
           <h2>類別 class</h2>
           <pre data-id="x"><code data-trim></code></pre>
         </section>
+        <section data-auto-animate>
+          <h2>稽古 Practice</h2>
+          <pre data-id="x"><code class="md" data-trim></code></pre>
+        </section>
       </section>
       <!-- end class -->
 
       <section>
         <section data-auto-animate>
+          <h2></h2>
           <pre data-id="x"><code data-trim></code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>稽古 Practice</h2>
+          <pre data-id="x"><code class="md" data-trim></code></pre>
         </section>
       </section>
     </div>
