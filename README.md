@@ -13,10 +13,4 @@ $ tree -L 1
 ├── slide/   # 簡報
 ├── README.md
 ├── 大綱.md
-└── 從C語言快速上手Python的基礎實戰.pptx
 ```
-
-## 簡報字體
-
-[源雲明體](https://github.com/ButTaiwan/genwan-font)
-[源樣黑體](https://github.com/ButTaiwan/genyog-font)
