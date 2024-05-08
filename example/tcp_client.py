@@ -8,24 +8,37 @@ if not s:
 
 s.settimeout(100)
 
-s.connect(target_addr)
+try:
+    s.connect(target_addr)
+    communicate()
+except ConnectionRefusedError:
+    print("Connection is refused.")
 
 """
 與 server 溝通
 """
-while True:
-    request = input(f"to {target_addr[0]}:{target_addr[1]} < ")
 
-    if request == "":
-        request = "NONE\r\n"
-    elif request == "quit":
-        s.send(bytes(b"QUIT\r\n"))
-        s.close()
-        break
 
-    s.send(bytes(request, "utf-8"))
-    while not s.recv(2048) == bytes(request, "utf-8"):
-        print("Try to resend data.")
-        s.send(encode(request))
+def communicate():
+    while True:
+        request = input(f"to {target_addr[0]}:{target_addr[1]} < ")
 
-s.close()
+        """
+        設定特殊資料
+        """
+        if request == "":
+            request = "NONE\r\n"
+        elif request == "quit":
+            s.send(bytes(b"QUIT\r\n"))
+            s.close()
+            break
+
+        """
+        傳送資料
+        """
+        try:
+            s.send(bytes(request, "utf-8"))
+        except ConnectionResetError:
+            print("Server is down.")
+            s.close()
+            break

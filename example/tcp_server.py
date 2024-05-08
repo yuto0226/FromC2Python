@@ -1,19 +1,27 @@
 import threading
 import socket
 
+"""
+設定連線目標
+"""
 addr = ("127.0.0.1", 8080)
 
-s = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
-
-if not s:
-    print("fail to create socket.")
+s = socket.socket(family=socket.AF_INET,
+                  type=socket.SOCK_STREAM)   # 建立 socket 物件
+# family=socket.AF_INET
+# type=socket.SOCK_STREAM
 
 s.bind(addr)
 
 print("Waiting for connection ... ")
 s.listen(5)
 
+
+"""
+處理連線的資料
+"""
 connections = []
+
 
 def connection(conn, addr):
     print(f"{addr[0]}:{addr[1]} connected.")
@@ -29,12 +37,17 @@ def connection(conn, addr):
 
     conn.close()
 
+
+"""
+處理 client 端連線
+"""
 def server():
     while True:
         conn, addr = s.accept()  # 接收連線
         new_connection = threading.Thread(target=connection, args=(conn, addr))
         connections.append(new_connection)
         new_connection.start()
+
 
 server()
 
