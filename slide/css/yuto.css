@@ -1,3 +1,19 @@
 code {
-    border-radius: 10px;
+  border-radius: 10px;
+}
+
+.color-red{
+    background-color: crimson;
+}
+
+.tag-style {
+  padding: 0px 20px;
+  margin: 4px 1px !important;
+  border-bottom-width: 0px;
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  border-left-width: 0px;
+  border-top-width: 0px;
 }
