@@ -8,13 +8,6 @@ if not s:
 
 s.settimeout(100)
 
-try:
-    s.connect(target_addr)
-    communicate()
-except ConnectionRefusedError:
-    print("Connection is refused.")
-
-
 """
 與 server 溝通
 """
@@ -41,3 +34,10 @@ def communicate():
             print("Server is down.")
             s.close()
             break
+
+
+try:
+    s.connect(target_addr)
+    communicate()
+except ConnectionRefusedError:
+    print("Connection is refused.")
