@@ -14,11 +14,10 @@ try:
 except ConnectionRefusedError:
     print("Connection is refused.")
 
+
 """
 與 server 溝通
 """
-
-
 def communicate():
     while True:
         request = input(f"to {target_addr[0]}:{target_addr[1]} < ")
