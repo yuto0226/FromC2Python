@@ -1171,17 +1171,17 @@
         </section>
         <section data-auto-animate>
           <h2>送出 HTTP 請求</h2>
-          <pre data-id="x"><code class="py" data-trim>
+          <pre data-id="x"><code class="py" data-trim data-line-numbers>
             import requests
             url = "i4010.isrcttu.net"
             r = requests.get(url)
             print(r)
-            print(r.head)
+            print(r.headers)
           </code></pre>
         </section>
         <section data-auto-animate>
           <h2>送出 HTTP 請求</h2>
-          <pre data-id="x"><code class="py" data-trim>
+          <pre data-id="x"><code class="py" data-trim data-ln-start-from="6" data-line-numbers="">
             print(r.text)
           </code></pre>
         </section>
