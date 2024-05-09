@@ -1173,9 +1173,10 @@
           <h2>送出 HTTP 請求</h2>
           <pre data-id="x"><code class="py" data-trim>
             import requests
-            url = "https://httpbin.org/"
+            url = "i4010.isrcttu.net"
             r = requests.get(url)
             print(r)
+            print(r.head)
           </code></pre>
         </section>
         <section data-auto-animate>
@@ -1198,7 +1199,7 @@
         </section>
         <section data-auto-animate>
           <h2>PTT 美食版</h2>
-          <pre data-id="x"><code class="py" data-trim>
+          <pre data-id="x"><code class="py" data-trim data-line-numbers="1-13|1-2|5|9|10|11-13">
             root = "https://www.ptt.cc"
             q = "/bbs/Food/index.html"
             
