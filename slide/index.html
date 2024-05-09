@@ -1063,6 +1063,15 @@
           <h2>WWW</h2>
           <img src="../img/browser.png" height="400">
         </section>
+        <section data-auto-animate="">
+          <h2>Server-Client</h2>
+          <img src="../img/server-client.jpeg" height="400" alt="picture"><br>
+          <a href="https://ithelp.ithome.com.tw/articles/10193877">關於後端觀念(一)-什麼是client-server架構?</a>
+        </section>
+        <section>
+          <h2>HTTP Request</h2>
+          <img src="https://study-ccna.com/wp-content/images/http_process_explained.jpg" height="400" alt="">
+        </section>
         <section data-auto-animate>
           <h2>URL</h2>
           <p style="font-size: 32px !important;">
@@ -1079,20 +1088,135 @@
         <p style="font-size: 32px !important;">
           <span class="tag-style color-red">slide.html</span>
           <span class="tag-style color-red">#Internet</span>
-          <span class="tag-style color-red">?topic=www&content=url</span>
+          <span class="tag-style color-red">?topic=網際網路and爬蟲&content=url</span>
         </p>
         </section>
         <section data-auto-animate>
-          <h2>WWW</h2>
-          <ul>
-            <li>TCP / IP</li>
-            <li>HTTP</li>
-            <li>HTTPS</li>
-          </ul>
+          <h2>RFC 意見徵求搞</h2>
+          <p>
+            <a href="https://zh.wikipedia.org/zh-tw/RFC" target="_blank">Wiki: RFC</a><br>
+            <a href="https://datatracker.ietf.org/" target="_blank">IETF Datatracker</a>
+          </p>
         </section>
         <section data-auto-animate>
-          <h2>稽古 Practice</h2>
-          <pre data-id="x"><code class="md" data-trim></code></pre>
+          <h2><a href="https://datatracker.ietf.org/doc/html/rfc791" target="_blank">IP 網際網路協定</a></h2>
+          <pre data-id="x"><code class="zsh" data-trim>
+            $ ipconfig
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2><a href="https://datatracker.ietf.org/doc/html/rfc793" target="_blank">TCP</a></h2>
+          <img src="https://buecher.mamawe.net/buecher/troubleshoot-linux-network/text/images/tcp-handshake.png" height="400" alt="">
+        </section>
+        <section data-auto-animate>
+          <h2>TCP</h2>
+          <p>
+            <ul>
+              <li><strong>SYN</strong>(Synchronization)：建立連線</li>
+              <li><strong>ACK</strong>(Acknowledgement)：確認有收到封包</li>
+              <li><strong>FIN</strong>(Finish)：終止連接</li>
+            </ul>
+          </p>
+          <p><a href="https://www.geeksforgeeks.org/tcp-flags/" target="_blank">TCP flags</a></p>
+        </section>
+        <section data-auto-animate>
+          <h2>TCP</h2>
+          <img src="https://buecher.mamawe.net/buecher/troubleshoot-linux-network/text/images/tcp-shutdown.png" height="550" alt="">
+        </section>
+        <section data-auto-animate>
+          <h2>TCP</h2>
+          <span>我(client)：172.17.36.141</span><br>
+          <span>伺服器(server)：107.155.58.205</span>
+          <img src="../img/tcp_hand_shake.png" alt="">
+        </section>
+        <section data-auto-animate>
+          <h2><a href="https://datatracker.ietf.org/doc/html/rfc2616" target="">HTTP</a></h2>
+          <p>HTTP request</p>
+          <pre data-id="x"><code class="str" data-trim>
+            GET / HTTP/1.1\r\n
+            Host: i4010.isrcttu.net:9996\r\n
+            \r\n
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2><a href="https://datatracker.ietf.org/doc/html/rfc2616" target="">HTTP</a></h2>
+          <p>HTTP responce</p>
+          <pre data-id="x"><code class="str" data-trim>
+            HTTP/1.1 200 OK\r\n
+            Server: nginx/1.24.0\r\n
+            Date: Thu, 09 May 2024 03:26:19 GMT\r\n
+            Content-Type: text/html; charset=UTF-8\r\n
+            Transfer-Encoding: chunked\r\n
+            Connection: keep-alive\r\n
+            \r\n
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>HTTPS</h2>
+          <img src="../img/https_work.png" height="450" alt="" srcset="">
+        </section>
+      </section>
+      <section>
+        <section data-auto-animate>
+          <h2><a href="https://docs.python-requests.org/en/latest/index.html" target="_blank" rel="noopener noreferrer">
+            Requests: HTTP for Humans™
+          </a></h2>
+          <p><strong>Requests</strong> is an elegant and simple HTTP library for Python, built for human beings.</p>
+        </section>
+        <section data-auto-animate>
+          <h2>安裝 Requests 函式庫</h2>
+          <pre data-id="x"><code class="zsh" data-trim>
+            $ pip install requests
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>送出 HTTP 請求</h2>
+          <pre data-id="x"><code class="py" data-trim>
+            import requests
+            url = "https://httpbin.org/"
+            r = requests.get(url)
+            print(r)
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>送出 HTTP 請求</h2>
+          <pre data-id="x"><code class="py" data-trim>
+            print(r.text)
+          </code></pre>
+        </section>
+      </section>
+      <section>
+        <section data-auto-animate>
+          <h2><a href="https://beautiful-soup-4.readthedocs.io/en/latest/" target="_blank">Beautiful Soup</a></h2>
+          <p><strong>Beautiful Soup</strong> is a Python library for pulling data out of HTML and XML files.</p>
+        </section>
+        <section data-auto-animate>
+          <h2>安裝 Beautiful Soup 4 函式庫</h2>
+          <pre data-id="x"><code class="zsh" data-trim>
+            $ pip install beautifulsoup4
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>PTT 美食版</h2>
+          <pre data-id="x"><code class="py" data-trim>
+            root = "https://www.ptt.cc"
+            q = "/bbs/Food/index.html"
+            
+            import requests
+            r = requests.get(root + q)
+            print("responce:", r)
+            
+            from bs4 import BeautifulSoup
+            soup = BeautifulSoup(r.text, "html.parser")
+            titles = soup.find_all("div", class_="title")
+            for line in titles:
+              print(line.a.get_text())
+              print(root + line.a["href"])
+          </code></pre>
+
+        </section>
+        <section data-auto-animate>
+          <h2></h2>
         </section>
       </section>
       <!-- end socket -->

@@ -12,5 +12,5 @@ $ tree -L 1
 ├── practice/   # 練習程式碼
 ├── slide/   # 簡報
 ├── README.md
-├── 大綱.md
+└── 大綱.md
 ```
